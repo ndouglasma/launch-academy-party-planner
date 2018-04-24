@@ -1,0 +1,20 @@
+  <% if !@errors.nil? %>
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+ <form action="/parties" method="post">
+   <label for= "name">Party Name:</label>
+   <input type="text" name="name" id="name" value=<%= @name %>>
+   <br>
+   <label for="description">Description:</label>
+   <input type="text" name="description" id="description" value=<%= @description %>>
+   <br>
+   <label for="location">Location:</label>
+   <input type="text" name="location" id="location" value=<%= @location %>>
+   <br>
+  <button class="button" type="submit">Submit</button>
+ </form>

@@ -1,0 +1,8 @@
+<h1>Friends</h1>
+<ul>
+ <% @friends.each do |friend| %>
+   <li><%= friend.full_name %></li>
+ <% end %>
+</ul>
+
+<button class="button"><a href="/friends/new"><b>Add a New Friend</b></a></button>
